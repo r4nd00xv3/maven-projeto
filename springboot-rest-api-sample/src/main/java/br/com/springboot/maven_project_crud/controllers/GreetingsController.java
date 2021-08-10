@@ -112,15 +112,15 @@ public class GreetingsController {
 	
 	
 	
-/*	@GetMapping(value = "buscarPorNome") /* mapeia a url */
-	/*@ResponseBody /* Descricao da resposta */
-	/*public ResponseEntity<List<Usuario>> buscarPorNome(@RequestParam(name = "name") String name) {*/ /* Recebe os dados para consultar */
+	@GetMapping(value = "buscarPorNome") /* mapeia a url */
+	@ResponseBody /* Descricao da resposta */
+	public ResponseEntity<List<Usuario>> buscarPorNome(@RequestParam(name = "name") String name){ /* Recebe os dados para consultar */
 
-		/*List<Usuario> usuario = usuarioRepository.buscarPorNome(name.trim().toUpperCase());*/
+	List<Usuario> usuario = usuarioRepository.buscarPorNome(name.trim().toUpperCase());
 
-		/*return new ResponseEntity<List<Usuario>>(usuario, HttpStatus.OK);*/
+		return new ResponseEntity<List<Usuario>>(usuario, HttpStatus.OK);
 
-	}
+	}}
 	
 	
 	
